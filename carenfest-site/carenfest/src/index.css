@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    background-color: #0D0A09;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.carenfest-glow {
+  background: radial-gradient(
+    ellipse 85% 32% at 50% 0%,
+    rgba(190, 56, 42, 0.24) 0%,
+    rgba(24, 14, 12, 0.1) 55%,
+    rgba(13, 10, 9, 0) 100%
+  );
+}
+
+/* Hide scrollbars cleanly on horizontal pill bars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.7;
+  cursor: pointer;
+}
